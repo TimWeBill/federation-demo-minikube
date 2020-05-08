@@ -1,6 +1,6 @@
 # Federated GraphQL Server with Minikube
 
-This is an altered clone of [Apollo's Federation Demo](https://github.com/apollographql/federation-demo) to be run with Kubernetes on Minikube. The accompanying Medium article can be found [here]().
+This is an altered clone of [Apollo's Federation Demo](https://github.com/apollographql/federation-demo) to be run with Kubernetes on Minikube. The accompanying Medium article can be found [here](https://medium.com/webill/run-a-federated-graphql-server-with-minikube-1d0f913ee8a8).
 
 ## Apollo Federation Demo
 
