@@ -1,0 +1,93 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: accounts
+spec:
+  selector:
+    matchLabels:
+      app: accounts
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: accounts
+    spec:
+      containers:
+        - name: accounts
+          image: timwebill/accounts:latest
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: reviews
+spec:
+  selector:
+    matchLabels:
+      app: reviews
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: reviews
+    spec:
+      containers:
+        - name: reviews
+          image: timwebill/reviews:latest
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: products
+spec:
+  selector:
+    matchLabels:
+      app: products
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: products
+    spec:
+      containers:
+        - name: products
+          image: timwebill/products:latest
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: inventory
+spec:
+  selector:
+    matchLabels:
+      app: inventory
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: inventory
+    spec:
+      containers:
+        - name: inventory
+          image: timwebill/inventory:latest
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: gateway
+spec:
+  selector:
+    matchLabels:
+      app: gateway
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gateway
+    spec:
+      containers:
+        - name: gateway
+          image: timwebill/gateway:latest

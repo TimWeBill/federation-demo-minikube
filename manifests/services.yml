@@ -1,0 +1,59 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: accounts
+spec:
+  selector:
+    app: accounts
+  ports:
+    - port: 4001
+  type: ClusterIP
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: reviews
+spec:
+  selector:
+    app: reviews
+  ports:
+    - port: 4002
+  type: ClusterIP
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: products
+spec:
+  selector:
+    app: products
+  ports:
+    - port: 4003
+  type: ClusterIP
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: inventory
+spec:
+  selector:
+    app: inventory
+  ports:
+    - port: 4004
+  type: ClusterIP
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: gateway
+spec:
+  selector:
+    app: gateway
+  ports:
+    - port: 4000
+      nodePort: 30000
+  type: NodePort
